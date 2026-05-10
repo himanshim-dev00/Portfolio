@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-start: #060408dc;
+    --bg-mid: #06010ad7;
+    --bg-end: #07010dde;
+    --text-main: #f7f3ff;
+    --text-soft: #a398b3;
+    --accent: #e1d5ece9;
+    --panel: rgba(255,255,255,0.06);
+    --panel-border: rgba(123, 13, 98, 0.943);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #020103e9;
+    background-image: radial-gradient(circle at top left, rgba(9, 7, 10, 0.954), transparent 28%),
+        radial-gradient(circle at right center, rgba(125,72,255,0.14), transparent 24%),
+        linear-gradient(135deg, var(--bg-start), var(--bg-mid) 55%, var(--bg-end));
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 56px 32px;
+    color: var(--text-main);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 100%;
+    max-width: 1320px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.left-section{
+    width: 100%;
+    max-width: 760px;
+    text-align: center;
+}
+
+.left-section h1{
+    color: var(--text-main);
+    font-size: clamp(3rem, 7vw, 5.2rem);
+    line-height: 1.1;
+    margin-bottom: 22px;
+}
+
+.left-section span{
+    color: var(--accent);
+}
+
+.left-section p{
+    color: var(--text-soft);
+    line-height: 1.7;
+    font-size: 1.05rem;
+    max-width: 32ch;
+    margin: 0 auto;
+}
+
+.btn-home{
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 18px;
+    background: linear-gradient(90deg, var(--accent), #7b5bff);
+    color: white;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 600;
+    box-shadow: 0 8px 22px rgba(117,65,200,0.18);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.btn-home:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(117,65,200,0.22);
+    opacity: 0.98;
+}
+
+.projects-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-content: start;
+}
+
+.card{
+    position: relative;
+    /* make tiles landscape */
+    min-height: 160px;
+    aspect-ratio: 16 / 9;
+    border-radius: 24px;
+    overflow: hidden;
+    text-decoration: none;
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.22);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.content{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 18px 16px;
+    background: linear-gradient(to top, rgba(0,0,0,0.92), rgba(0,0,0,0.2), transparent);
+    color: var(--text-main);
+    /* reduce offset so overlay hides less on landscape tiles */
+    transform: translateY(calc(100% - 3.2rem));
+    transition: transform 0.45s ease;
+}
+
+.content h2{
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.content p{
+    color: #e8dff5;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    border-color: rgba(197,107,255,0.55);
+    box-shadow: 0 26px 55px rgba(0,0,0,0.32);
+}
+
+.card:hover img,
+.card:focus-visible img{
+    transform: scale(1.1);
+    filter: blur(3px) brightness(0.75);
+}
+
+.card:hover .content,
+.card:focus-visible .content{
+    transform: translateY(0);
+}
+
+.card:focus-visible{
+    outline: 3px solid rgba(197,107,255,0.9);
+    outline-offset: 4px;
+}
+
+@media(max-width: 1120px){
+    .container{
+        gap: 28px;
+    }
+
+    .left-section{
+        text-align: center;
+        max-width: 700px;
+    }
+
+    .projects-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media(max-width: 720px){
+    body{
+        padding: 28px 18px;
+    }
+
+    .projects-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .left-section h1{
+        font-size: clamp(2.7rem, 15vw, 4rem);
+    }
+}

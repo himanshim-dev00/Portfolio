@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f7f5f2;
+  color: #222;
+  overflow-x: hidden;
+  padding: 30px 60px;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.logo {
+  font-size: 48px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+  position: relative;
+}
+
+nav a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 3px;
+  background: #6d745a;
+  border-radius: 10px;
+}
+
+.icons {
+  display: flex;
+  gap: 50px;
+  font-size: 28px;
+}
+
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.left {
+  width: 40%;
+}
+
+.tag {
+  color: #6d745a;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.left h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 110px;
+  line-height: 0.95;
+  font-weight: 500;
+}
+
+.line {
+  width: 60px;
+  height: 3px;
+  background: #6d745a;
+  margin: 30px 0;
+}
+
+.left p {
+  color: #666;
+  line-height: 1.8;
+  max-width: 450px;
+}
+
+.colors {
+  margin-top: 40px;
+}
+
+.colors h3 {
+  margin-bottom: 15px;
+}
+
+.color-box {
+  display: flex;
+  gap: 18px;
+}
+
+.color-box span {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: block;
+}
+
+.green {
+  background: #7a8166;
+}
+
+.white {
+  background: #e6dfd8;
+}
+
+.pink {
+  background: #d9a5a5;
+}
+
+.details {
+  margin-top: 40px;
+}
+
+.details h3 {
+  margin-bottom: 15px;
+}
+
+.features {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.feature {
+  text-align: center;
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #e9e5db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+.right {
+  width: 60%;
+  position: relative;
+}
+
+.product-card {
+  position: relative;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 30px;
+  height: 650px;
+  object-fit: cover;
+}
+
+.price {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.rating {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  z-index: 2;
+}
+
+.vertical-text {
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: rotate(-90deg);
+  font-size: 25px;
+  letter-spacing: 1px;
+  color:rgb(12, 241, 58)
+}
+
+.bag-btn {
+  position: absolute;
+  right: -40px;
+  bottom: 40px;
+  width: 160px;
+  height: 170px;
+  border-radius: 50%;
+  border: none;
+  background: #6d745a;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+.side-gallery {
+  position: absolute;
+  right: -120px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+
+.bottom-box {
+  margin-top: 30px;
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.info span {
+  font-size: 32px;
+}
+
+.info p {
+  color: #333;
+  font-size: 15px;
+}
+
+
+@media(max-width: 1200px) {
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .side-gallery {
+    display: none;
+  }
+
+  .left h1 {
+    font-size: 70px;
+  }
+
+  .product-card img {
+    height: auto;
+  }
+
+  .bag-btn {
+    right: 20px;
+    width: 130px;
+    height: 130px;
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 200px) {
+
+  body {
+    padding: 20px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .left h1 {
+    font-size: 55px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bottom-box {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .vertical-text {
+    display: none;
+  }
+}
