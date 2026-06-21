@@ -1,56 +1,46 @@
-# Portfolio
 # DOM Project
 
 ## Overview
 
-This project is built using HTML, CSS, and JavaScript to understand and visualize DOM (Document Object Model) concepts and the Browser Rendering Pipeline.
+A frontend project built using HTML, CSS, and JavaScript to explore DOM Manipulation and Browser Rendering concepts.
 
 ## Features
 
-* DOM Manipulation using JavaScript
-* Interactive UI Components
+* DOM Manipulation
+* Interactive User Interface
 * Browser Rendering Pipeline Visualization
-* Clean and Responsive Design
-* Beginner-Friendly Learning Project
+* Responsive Design
+* Clean Project Structure
 
 ## Technologies Used
 
 * HTML5
 * CSS3
-* JavaScript (DOM)
+* JavaScript
 
-## Project Structure
+## Folder Structure
 
-```text
-Portfolio/
-│
-├── html/
-│   └── index.html
-│
-├── css/
-│   └── dom.css
-│
+Portfolio
 ├── assets/
 │   └── dom.js
-│
+├── css/
+│   └── dom.css
+├── html/
+│   └── index.html
 └── README.md
-```
 
 ## Learning Outcomes
 
-Through this project, I learned:
-
-* How the DOM works
-* DOM Selection and Manipulation
-* Event Handling
+* Understanding the DOM
+* Working with Events
 * Browser Rendering Process
-* Organizing Frontend Projects
+* JavaScript DOM Methods
+* Frontend Project Organization
 
 ## Live Demo
 
-Netlify: https://dom-project-himanshi.netlify.app
+https://dom-project-himanshi.netlify.app
 
 ## Author
 
 Himanshi Mishra
-
