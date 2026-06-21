@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Explorer Task Manager</title>
+
+  <link rel="stylesheet" href="../css/dom.css">
+</head>
+<body>
+
+  <header>
+      <h1>DOM Explorer Task Manager</h1>
+
+      <button id="theme-btn">
+          Toggle Theme
+      </button>
+  </header>
+
+
+  <section class="task-form-section">
+
+      <form id="task-form">
+
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Enter task"
+          >
+
+          <select id="category">
+
+              <option value="Study">Study</option>
+              <option value="Work">Work</option>
+              <option value="Personal">Personal</option>
+
+          </select>
+
+          <button type="submit">
+              Add Task
+          </button>
+
+      </form>
+
+  </section>
+
+
+  <section>
+
+      <h2>Tasks</h2>
+
+      <div id="task-container">
+
+      </div>
+
+  </section>
+
+
+
+  <section id="attribute-demo">
+
+      <h2>Attributes vs Properties</h2>
+
+      <input
+      id="demo-input"
+      value="Default Value">
+
+      <button id="check-btn">
+          Check Difference
+      </button>
+
+  </section>
+
+
+  <section id="event-demo">
+
+      <h2>Event Propagation</h2>
+
+      <div id="grandparent">
+
+          Grandparent
+
+          <div id="parent">
+
+              Parent
+
+              <button id="child">
+
+                  Child Button
+
+              </button>
+
+          </div>
+
+      </div>
+
+  </section>
+
+
+
+  <section id="pipeline">
+
+      <h2>Browser Rendering Pipeline</h2>
+
+      <div class="flow-box">HTML</div>
+      <div class="flow-box">Parsing</div>
+      <div class="flow-box">Tokenization</div>
+      <div class="flow-box">DOM Tree</div>
+      <div class="flow-box">CSSOM Tree</div>
+      <div class="flow-box">Render Tree</div>
+
+  </section>
+
+
+<script src="../assets/dom.js"></script>
+
+</body>
+</html>
